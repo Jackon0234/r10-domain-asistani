@@ -1,10 +1,8 @@
-🦅 R10 Pro Domain Asistanı 
-
-**R10 Pro Domain Asistanı**, Python ile geliştirilmiş profesyonel bir domain sorgulama, analiz ve "Sniper" (Düşecek domain yakalama) aracıdır.
+Python ile geliştirilmiş profesyonel bir domain sorgulama, analiz ve "Sniper" (Düşecek domain yakalama) aracıdır.
 
 Whois verilerini analiz eder, domain yaşını hesaplar ve dolu olan domainleri veritabanına kaydederek boşa düştüğü an size **Telegram üzerinden bildirim** gönderir.
 
-![R10 Domain Asistanı Ekran Görüntüsü](https://i.imgur.com/cEwKd4t.png)
+ Domain Asistanı Ekran Görüntüsü](https://i.imgur.com/cEwKd4t.png)
 
 ## 🌟 Özellikler
 
