@@ -1,48 +1,73 @@
-Python ile geliştirilmiş profesyonel bir domain sorgulama, analiz ve "Sniper" (Düşecek domain yakalama) aracıdır.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=Python%20Domain%20Sniper%20v1.5&fontSize=50&animation=fadeIn" />
+</p>
 
-Whois verilerini analiz eder, domain yaşını hesaplar ve dolu olan domainleri veritabanına kaydederek boşa düştüğü an size **Telegram üzerinden bildirim** gönderir.
+<div align="center">
 
- Domain Asistanı Ekran Görüntüsü](https://i.imgur.com/cEwKd4t.png)
+# 🎯 Domain Asistanı & Sniper Bot
+**Yapay Zeka Destekli, Profesyonel Domain Analiz ve Takip Sistemi**
 
-## 🌟 Özellikler
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Telegram](https://img.shields.io/badge/Telegram-Bot_Alerts-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/BotFather)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg?style=for-the-badge)]()
 
-* **🔍 Detaylı Whois Analizi:** Kayıt tarihi, bitiş tarihi ve firma bilgilerini çeker.
-* **⏳ Akıllı Yaş Hesaplama:** Domainin tam yaşını (Yıl/Ay/Gün) olarak hesaplar.
-* **🎯 Sniper Modu (Takip Sistemi):** Sorguladığınız domain doluysa veritabanına ekler, 7/24 arka planda nöbet tutar ve boşa düştüğü saniye haber verir.
-* **💡 Jenerik Öneri Sistemi:** Aradığınız domain doluysa, yapay zeka mantığıyla boşta olan benzer ve değerli varyasyonları (Prefix/Suffix) otomatik önerir.
-* **🚦 Trafik Işığı Sistemi:** Domain bitiş süresine göre görsel uyarı verir (🔴 Kritik / 🟢 Güvenli).
-* **🛡️ Anti-Crash:** Hata durumunda bot durmaz, log tutar ve çalışmaya devam eder.
+</div>
 
-## 🛠️ Kurulum
+---
 
-Projeyi bilgisayarınıza indirin (veya `git clone` yapın) ve proje klasörüne gidin.
+## 📖 Proje Hakkında
+Sıradan bir Whois sorgulayıcıdan çok daha fazlası. **Domain Asistanı**, değerli domainleri sizin yerinize 7/24 nöbet tutarak takip eden, boşa düştüğü an Telegram üzerinden sizi uyandıran bir **Sniper** (Keskin Nişancı) botudur.
 
-### 1. Gerekli Kütüphaneleri Yükleyin
-Terminal veya CMD açarak şu komutu çalıştırın:
+> [!IMPORTANT]
+> Bu bot, Whois sunucularındaki sorgu limitlerini aşmamak için akıllı bekleme (rate-limit handling) sistemine sahiptir.
 
+---
+
+## 🚀 Öne Çıkan Özellikler
+
+| Özellik | Açıklama |
+| :--- | :--- |
+| **🔍 Derin Analiz** | Kayıt/Bitiş tarihi, DNS, Registrar ve kapsamlı yaş analizi. |
+| **🎯 Sniper Modu** | "Pending Delete" sürecini izler, boşa düştüğü an haber verir. |
+| **💡 Akıllı Öneriler** | Dolu domainler için yapay zeka destekli prefix/suffix varyasyonları üretir. |
+| **🚦 Trafik Işığı** | Kalan süreye göre görsel uyarı: 🔴 Kritik (<30 gün) / 🟢 Güvenli. |
+| **🛡️ Anti-Crash** | Hata anında sistemi kapatmaz, log tutar ve otomatik yeniden bağlanır. |
+
+---
+
+## 📸 Önizleme
+<p align="center">
+  <img src="https://i.imgur.com/cEwKd4t.png" width="85%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border: 1px solid #333;">
+</p>
+
+---
+
+## 🛠️ Kurulum & Kullanım
+
+### 1️⃣ Gereksinimler
+Öncelikle depoyu klonlayın ve kütüphaneleri yükleyin:
+```bash
+git clone [https://github.com/KULLANICI_ADIN/Domain-Sniper.git](https://github.com/KULLANICI_ADIN/Domain-Sniper.git)
+cd Domain-Sniper
 pip install -r requirements.txt
-2. Yapılandırma (.env Ayarı)
-Proje ana dizininde .env adında bir dosya oluşturun (yoksa oluşturun) ve Telegram Bot Tokeninizi girin:
 
+2️⃣ Yapılandırma
+Ana dizinde bir .env dosyası oluşturun ve Telegram bilgilerinizi ekleyin:
 
-TELEGRAM_TOKEN=BURAYA_TELEGRAM_BOT_TOKENINIZ_GELECEK
-(Telegram Bot Token'ı @BotFather üzerinden alabilirsiniz.)
+Kod snippet'i
+TELEGRAM_TOKEN=123456789:ABCDefghIJKL-mnopq
+# Not: Token'ı @BotFather üzerinden alabilirsiniz.
+3️⃣ Başlatma
+Sistemi ayağa kaldırmak için terminale şu komutu girin:
 
-3. Çalıştırın
-Terminalden uygulamayı başlatın:
-
-
+Bash
 python main.py
-📂 Dosya Yapısı
-main.py: Botun ana çalışma dosyası ve kullanıcı arayüzü.
+📂 Proje Mimarisi
+Plaintext
+├── 📄 main.py           # Ana Giriş & UI Kontrolü
+├── ⚙️ config.py         # Ayarlar & Sistem Sabitleri
+├── 🔍 domain_checker.py # Whois Motoru & Analiz Algoritması
+├── 🗄️ database.py       # SQLite Veritabanı Yönetimi (Sniper Listesi)
+└── 📄 .env              # Hassas Veriler (Tokenlar)
 
-domain_checker.py: Whois sorgularını yapan ve verileri analiz eden motor.
-
-database.py: Takip edilen domainleri saklayan SQLite veritabanı yöneticisi.
-
-config.py: Sistem ayarları ve sabitler.
-
-🤝 Katkıda Bulunma
-Bu proje açık kaynaklıdır ve geliştirmeye açıktır. Pull request göndererek veya "Issue" açarak gelişmesine katkıda bulunabilirsiniz.
-
-Geliştirici: JACKON
