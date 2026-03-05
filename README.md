@@ -47,7 +47,6 @@ Sıradan bir Whois sorgulayıcıdan çok daha fazlası. **Domain Asistanı**, de
 
 ### 1️⃣ Gereksinimler
 Öncelikle depoyu klonlayın ve kütüphaneleri yükleyin:
-```bash
 git clone [https://github.com/KULLANICI_ADIN/Domain-Sniper.git](https://github.com/KULLANICI_ADIN/Domain-Sniper.git)
 cd Domain-Sniper
 pip install -r requirements.txt
@@ -61,7 +60,6 @@ TELEGRAM_TOKEN=123456789:ABCDefghIJKL-mnopq
 3️⃣ Başlatma
 Sistemi ayağa kaldırmak için terminale şu komutu girin:
 
-Bash
 python main.py
 📂 Proje Mimarisi
 Plaintext
